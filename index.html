@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <!-- <div id="holidayBanner" >
+          <video autoplay="autoplay" loop="loop" muted="">
+               <source src="https://www.midcitiespsychiatry.com/wp-content/uploads/Stress-Awareness-Month.mp4" type="video/mp4">
+          </video>
+     </div> -->
+
+<div id="default-popup" class="default-popup">
+     <img src="https://www.midcitiespsychiatry.com/wp-content/uploads/updated-location-banner.jpg" alt="" class="">
+</div>
+
+     <div id="holiday-popup-1">
+          <video autoplay="autoplay" loop="loop" muted="">
+               <source src="https://www.midcitiespsychiatry.com/wp-content/uploads/Mental-Health-Awareness-Month.mp4" type="video/mp4">
+          </video>
+     </div>
+     
+     <script type="text/javascript">
+          window.setInterval(function(){
+               
+               var current = new Date();
+               var popup_14  = new Date("January 14, 2023 06:55:00"); // January 14, 2023 5PM Sohail Time
+               var popup_15  = new Date("January 15, 2023 07:00:00"); // January 15, 2023 5PM Sohail Time
+               var popup_16  = new Date("January 16, 2023 07:00:00"); // January 16, 2023 5PM Sohail Time
+               
+               var defaultP  = new Date("January 17, 2023 07:00:00"); // January 17, 2023 5PM Sohail Time
+               
+               
+               console.log( current );
+          
+     
+     
+               if( current < popup_14  ){
+                    console.log( "Dispay Default Graphics" );
+                    document.getElementById( 'regGraphic' ).style.display = 'block';
+                    document.getElementById( 'holidayGraphic' ).style.display = 'none';
+               }
+     
+     // January 14, 2023 5PM Sohail Time
+     
+               else if( ( current > popup_14 ) && ( current < popup_15 ) ){
+                    console.log( "Dispay Holiday Graphics" );
+                    document.getElementById( 'regGraphic' ).style.display = 'none';
+                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
+               }
+     
+     // January 15, 2023 5PM Sohail Time
+               else if( ( current > popup_15 ) && ( current < popup_16 ) ){
+                    console.log( "Dispay Holiday Graphics" );
+                    document.getElementById( 'regGraphic' ).style.display = 'none';
+                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
+               }
+     
+     // January 16, 2023 5PM Sohail Time          
+               else if( ( current > popup_16 ) && ( current < defaultP  ) ){
+                    console.log( "Dispay Holiday Graphics" );
+                    document.getElementById( 'regGraphic' ).style.display = 'none';
+                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
+               
+               }
+     // January 17, 2023 5PM Sohail Time
+               else if( current > defaultP ){
+                    console.log( "Dispay Holiday Graphics" );
+                    document.getElementById( 'regGraphic' ).style.display = 'block';
+                    document.getElementById( 'holidayGraphic' ).style.display = 'none';
+               }      
+          }, 3000);
+     </script>
+     
+</body>
+</html>
