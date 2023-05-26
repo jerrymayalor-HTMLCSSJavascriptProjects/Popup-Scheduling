@@ -7,73 +7,95 @@
      <title>Document</title>
 </head>
 <body>
-     <!-- <div id="holidayBanner" >
-          <video autoplay="autoplay" loop="loop" muted="">
-               <source src="https://www.midcitiespsychiatry.com/wp-content/uploads/Stress-Awareness-Month.mp4" type="video/mp4">
-          </video>
-     </div> -->
 
-<div id="default-popup" class="default-popup">
-     <img src="https://www.midcitiespsychiatry.com/wp-content/uploads/updated-location-banner.jpg" alt="" class="">
+   <!-- ======  HTML CODES ============== -->
+
+<div id="default-popup" style="display: block;">
+   <img src="/wp-content/uploads/updated-location-banner.jpg" alt="" class="" width="500px" height="500px">
 </div>
 
-     <div id="holiday-popup-1">
-          <video autoplay="autoplay" loop="loop" muted="">
-               <source src="https://www.midcitiespsychiatry.com/wp-content/uploads/Mental-Health-Awareness-Month.mp4" type="video/mp4">
-          </video>
-     </div>
-     
-     <script type="text/javascript">
-          window.setInterval(function(){
-               
-               var current = new Date();
-               var popup_14  = new Date("January 14, 2023 06:55:00"); // January 14, 2023 5PM Sohail Time
-               var popup_15  = new Date("January 15, 2023 07:00:00"); // January 15, 2023 5PM Sohail Time
-               var popup_16  = new Date("January 16, 2023 07:00:00"); // January 16, 2023 5PM Sohail Time
-               
-               var defaultP  = new Date("January 17, 2023 07:00:00"); // January 17, 2023 5PM Sohail Time
-               
-               
-               console.log( current );
-          
-     
-     
-               if( current < popup_14  ){
-                    console.log( "Dispay Default Graphics" );
-                    document.getElementById( 'regGraphic' ).style.display = 'block';
-                    document.getElementById( 'holidayGraphic' ).style.display = 'none';
-               }
-     
-     // January 14, 2023 5PM Sohail Time
-     
-               else if( ( current > popup_14 ) && ( current < popup_15 ) ){
-                    console.log( "Dispay Holiday Graphics" );
-                    document.getElementById( 'regGraphic' ).style.display = 'none';
-                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
-               }
-     
-     // January 15, 2023 5PM Sohail Time
-               else if( ( current > popup_15 ) && ( current < popup_16 ) ){
-                    console.log( "Dispay Holiday Graphics" );
-                    document.getElementById( 'regGraphic' ).style.display = 'none';
-                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
-               }
-     
-     // January 16, 2023 5PM Sohail Time          
-               else if( ( current > popup_16 ) && ( current < defaultP  ) ){
-                    console.log( "Dispay Holiday Graphics" );
-                    document.getElementById( 'regGraphic' ).style.display = 'none';
-                    document.getElementById( 'holidayGraphic' ).style.display = 'block';
-               
-               }
-     // January 17, 2023 5PM Sohail Time
-               else if( current > defaultP ){
-                    console.log( "Dispay Holiday Graphics" );
-                    document.getElementById( 'regGraphic' ).style.display = 'block';
-                    document.getElementById( 'holidayGraphic' ).style.display = 'none';
-               }      
-          }, 3000);
-     </script>
-     
+<div id="holiday-popup-1" style="display: none;">
+   <video autoplay="autoplay" loop="loop" muted="">
+         <source src="/wp-content/uploads/Memorial-Day-1.mp4" type="video/mp4">
+   </video>
+</div>
+
+<div id="holiday-popup-2" style="display: none;">
+   <video autoplay="autoplay" loop="loop" muted="">
+         <source src="/wp-content/uploads/Memorial-Day-2.mp4" type="video/mp4">
+   </video>
+</div>
+
+<div id="holiday-popup-3" style="display: none;">
+   <video autoplay="autoplay" loop="loop" muted="">
+         <source src="/wp-content/uploads/Memorial-Day-3.mp4" type="video/mp4">
+   </video>
+</div>
+
+<!-- ======  JAVASCRIPT CODES ============== -->
+
+<script>
+window.setInterval(function(){
+   var currentDate = new Date();
+   var day1  = new Date("May 27, 2023 06:30:00"); // 5PM Sohail Time
+   var day2  = new Date("May 28, 2023 06:30:00"); // 5PM Sohail Time
+   var day3  = new Date("May 29, 2023 06:30:30"); // 5PM Sohail Time
+   var dayLast  = new Date("May 30, 2023 20:00:00"); // 7AM 5PM Sohail Time
+   console.log( currentDate );
+
+   if( currentDate < day1 ){
+         console.log( "Display Default Graphics" );
+         document.getElementById( 'default-popup' ).style.display = 'block';
+         document.getElementById( 'holiday-popup-1' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-2' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-3' ).style.display = 'none';
+   }
+   else if( currentDate > day1 && currentDate < day2 ){
+         console.log( "Display Holiday Graphics 1" );
+         document.getElementById( 'default-popup' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-1' ).style.display = 'block';
+         document.getElementById( 'holiday-popup-2' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-3' ).style.display = 'none';
+   }
+   else if( currentDate > day2 && currentDate < day3 ){
+         console.log( "Display Holiday Graphics 2" );
+         document.getElementById( 'default-popup' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-1' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-2' ).style.display = 'block';
+         document.getElementById( 'holiday-popup-3' ).style.display = 'none';
+   }
+   else if( currentDate > day3 && currentDate < dayLast ){
+         console.log( "Display Holiday Graphics 3" );
+         document.getElementById( 'default-popup' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-1' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-2' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-3' ).style.display = 'block';
+   }
+   else if( currentDate > dayLast ){
+         console.log( "Display Default Graphics" );
+         document.getElementById( 'default-popup' ).style.display = 'block';
+         document.getElementById( 'holiday-popup-1' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-2' ).style.display = 'none';
+         document.getElementById( 'holiday-popup-3' ).style.display = 'none';
+   }
+
+},3000);
+
+</script>
+
+<!--============ Popup Scheduling Styles ==============-->
+
+<style>
+#default-popup img,
+#holiday-popup-1 video,
+#holiday-popup-2 video,
+#holiday-popup-3 video{
+   width: 100%;
+}
+
+</style>
+
+
+    
 </body>
 </html>
